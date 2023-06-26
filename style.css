@@ -1,0 +1,131 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  color: #374151;
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  background-color: #ffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: inline-block;
+  width: 1028px;
+  padding: 44px;
+}
+
+.form__header {
+  margin-bottom: 24px;
+}
+
+.form__header h1 {
+  font-size: 24px;
+  line-height: 28px;
+  color: #374151;
+  margin: 0;
+}
+
+.form__header hr {
+  background: #d7dbdf;
+  opacity: 0.5;
+}
+
+.form__body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form__col {
+  flex: 1 1 300px;
+}
+
+.form__group {
+  margin-bottom: 24px;
+}
+
+.form__group label {
+  line-height: 19px;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.form__control {
+  background: #ffffff;
+  border: 1px solid #d2d6db;
+  border-radius: 6px;
+  padding: 8px;
+  height: 50px;
+  min-width: 295px;
+}
+
+.form__radio {
+  display: none;
+}
+
+.form__radio--label {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.form__submit {
+  padding: 16px 24px;
+  font-weight: 500;
+  color: #ffff;
+  border: 1px solid #d2d6db;
+  background-color: #5850eb;
+  border-radius: 6px;
+  display: flex;
+  cursor: pointer;
+  margin-left: auto;
+}
+/* CSS */
+
+/* Добавляем класс активного состояния для кнопки */
+.form__submit.active {
+  background-color: #ff9800; /* Цвет для активного состояния */
+}
+
+/* Стилизуем радиокнопки */
+.form__radio--input {
+  display: none;
+}
+
+.form__radio--label {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+/* Применяем стили к активному состоянию радиокнопки */
+.form__radio--input:checked + .form__radio--label {
+  color: #ff9800; /* Цвет для активного состояния радиокнопки */
+}
+
+/* Применяем стили к кнопке при выборе способа оплаты наличными */
+.form__radio--input#payment-cash:checked + .form__radio--label {
+  color: #ff9800; /* Цвет для активного состояния радиокнопки */
+}
+
+/* Применяем стили к кнопке при выборе способа оплаты картой */
+.form__radio--input#payment-card:checked + .form__radio--label {
+  color: #ff9800; /* Цвет для активного состояния радиокнопки */
+}
